@@ -20,5 +20,5 @@ setInterval(function () {
 
 	const potencial_Losses = document.querySelector("#potencial-losses")
 
-	potencial_Losses!.innerHTML = potencialLosses.toFixed(2) + " ₽"
+	potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(2)
 }, 1000)
