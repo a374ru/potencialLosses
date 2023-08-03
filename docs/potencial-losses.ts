@@ -2,6 +2,7 @@
 // Реальный потенциальный убыток по недопониманию созданный субъектом права
 // Доход был оборван 2023/08/01 и начал расти завуалированный убыток
 setInterval(function () {
+	let curentDate = new Date()
 	const SECMONF = 2635200 // среднее потерь в секунду
 	const kavkazDebet = 40000
 	const grayDebet = 45000
@@ -12,7 +13,6 @@ setInterval(function () {
 	let rrr = start_ubitka!.innerHTML = dateUbitka
 
 
-	let curentDate = new Date()
 	let intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000
 
 	let potencialLosses = allDebet / SECMONF * intervalDate

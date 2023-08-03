@@ -1,6 +1,7 @@
 // Реальный потенциальный убыток по недопониманию созданный субъектом права
 // Доход был оборван 2023/08/01 и начал расти завуалированный убыток
 setInterval(function () {
+    var curentDate = new Date();
     var SECMONF = 2635200; // среднее потерь в секунду
     var kavkazDebet = 40000;
     var grayDebet = 45000;
@@ -9,7 +10,6 @@ setInterval(function () {
     var dateUbitka = startUbitka.toLocaleString().slice(0, -10);
     var start_ubitka = document.querySelector("#start-ubitka");
     var rrr = start_ubitka.innerHTML = dateUbitka;
-    var curentDate = new Date();
     var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
     var potencialLosses = allDebet / SECMONF * intervalDate;
     /** Вставка данных в документ */
