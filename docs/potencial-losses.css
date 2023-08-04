@@ -4,13 +4,13 @@ body {
 	/* width: 100%; */
 	height: 100%;
 
-	background-color: #f0efd7;
+	background-color: #fffafa;
 	opacity: 1;
-	background-image: radial-gradient(circle at center center, #f5ff70, #ff7272),
+	background-image: radial-gradient(circle at center center, #ffffff, #ffdddd),
 		repeating-radial-gradient(
 			circle at center center,
-			#ffffff,
-			#ffffff,
+			#fffafa,
+			#fffafa,
 			30px,
 			transparent 60px,
 			transparent 30px
