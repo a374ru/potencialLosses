@@ -65,6 +65,7 @@ details {
 	max-width: 66%;
 	font-size: 1.3rem;
 	margin-bottom: 1em;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 666px) {
