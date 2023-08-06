@@ -13,6 +13,6 @@ setInterval(function () {
     var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
     var potencialLosses = allDebet / SECMONF * intervalDate;
     /** Вставка данных в документ */
-    var potencial_Losses = document.querySelector("#potencial-losses");
+    var potencial_Losses = document.getElementById("potencial-losses");
     potencial_Losses.innerHTML = "₽ " + potencialLosses.toFixed(2);
 }, 1000);
