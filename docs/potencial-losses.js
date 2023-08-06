@@ -7,7 +7,7 @@ setInterval(function () {
     var grayDebet = 45000;
     var allDebet = kavkazDebet + grayDebet;
     var startUbitka = new Date('2023-08-01');
-    var dateUbitka = startUbitka.toLocaleString().slice(0, -10);
+    var dateUbitka = startUbitka.toLocaleString()
     var start_ubitka = document.querySelector("#start-ubitka");
     var rrr = start_ubitka.innerHTML = dateUbitka;
     var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
