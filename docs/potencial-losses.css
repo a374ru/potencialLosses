@@ -70,7 +70,30 @@ details {
 	font-size: 1.3rem;
 	margin-bottom: 1em;
 	cursor: pointer;
+	text-align: justify;
+	color: #474747;
+}
 
+details[open]>::marker{
+color: rgb(255, 0, 0);
+}
+
+summary{
+color: rgb(255, 146, 146);
+font-size: 1.5rem;
+padding: .5em;
+text-align: center;
+
+}
+.summary{
+color:#5f0f0f;
+}
+summary::marker{
+color: #ffc5c5;
+}
+
+summary:hover{
+color:#000;
 }
 
 @media screen and (max-width: 666px) {
