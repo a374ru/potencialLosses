@@ -7,7 +7,7 @@ setInterval(function () {
 	const kavkazDebet = 40000
 	const grayDebet = 45000
 	const allDebet = kavkazDebet + grayDebet
-	const startUbitka = new Date('2023-08-01:00:00:00')
+	const startUbitka = new Date('2023-08-01')
 	const dateUbitka = startUbitka.toLocaleDateString()
 	const start_ubitka = document.getElementById("start-ubitka")
 	let rrr = start_ubitka!.innerHTML = dateUbitka
