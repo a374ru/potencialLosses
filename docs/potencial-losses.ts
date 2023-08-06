@@ -10,7 +10,7 @@ setInterval(function () {
 	const startUbitka = new Date('2023-08-01')
 	const dateUbitka = startUbitka.toLocaleDateString()
 	const start_ubitka = document.getElementById("start-ubitka")
-	let rrr = start_ubitka!.innerHTML = dateUbitka
+	start_ubitka!.innerHTML = dateUbitka
 
 
 	let intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000

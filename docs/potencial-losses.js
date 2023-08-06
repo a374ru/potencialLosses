@@ -6,10 +6,10 @@ setInterval(function () {
     var kavkazDebet = 40000;
     var grayDebet = 45000;
     var allDebet = kavkazDebet + grayDebet;
-    var startUbitka = new Date('2023-08-01:00:00:00');
+    var startUbitka = new Date('2023-08-01');
     var dateUbitka = startUbitka.toLocaleDateString();
     var start_ubitka = document.getElementById("start-ubitka");
-    var rrr = start_ubitka.innerHTML = dateUbitka;
+    start_ubitka.innerHTML = dateUbitka;
     var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
     var potencialLosses = allDebet / SECMONF * intervalDate;
     /** Вставка данных в документ */
