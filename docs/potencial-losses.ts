@@ -9,7 +9,7 @@ setInterval(function () {
 	const allDebet = kavkazDebet + grayDebet
 	const startUbitka = new Date('2023-08-01:00:00:00')
 	const dateUbitka = startUbitka.toLocaleDateString()
-	const start_ubitka = document.querySelector("#start-ubitka")
+	const start_ubitka = document.getElementById("start-ubitka")
 	let rrr = start_ubitka!.innerHTML = dateUbitka
 
 
@@ -18,7 +18,7 @@ setInterval(function () {
 	let potencialLosses = allDebet / SECMONF * intervalDate
 	/** Вставка данных в документ */
 
-	const potencial_Losses = document.querySelector("#potencial-losses")
+	const potencial_Losses = document.getElementById("potencial-losses")
 
 	potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(2)
 }, 1000)
