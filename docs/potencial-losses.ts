@@ -4,7 +4,10 @@
 let speedIntervalMLS = 1000
 let sizeOfCost = 2
 
-if (speedIntervalMLS < 77) { sizeOfCost = 3 }
+if (speedIntervalMLS < 77) {
+	sizeOfCost = 3
+
+}
 
 const kavkazDebet = 40000 * 12
 const grayDebet = 45000 * 12
@@ -15,12 +18,54 @@ const startUbitka = new Date('2023-08-01') // дата прекращения р
 const dateUbitka = startUbitka.toLocaleDateString()
 const start_ubitka = document.getElementById("start-ubitka")
 start_ubitka!.innerHTML = dateUbitka
+const potencial_Losses = document.getElementById("potencial-losses")
 
-setInterval(function () {
-	let curentDate = new Date()
-	let intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000
-	let potencialLosses = theCostOfASecond * intervalDate
-	const potencial_Losses = document.getElementById("potencial-losses")
-	potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(sizeOfCost)
-}, speedIntervalMLS
+function chek_speed_cost() {
+	clearInterval(si);
+	let chekSpeedCost = document.getElementById("chek-speed-cost");
+	if (chekSpeedCost!.checked) {
+		sizeOfCost = 3;
+		speedIntervalMLS = 33;
+		console.log(chekSpeedCost!.checked, speedIntervalMLS);
+		si = setInterval(
+
+			() => {
+				var curentDate = new Date();
+				var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
+				var potencialLosses = theCostOfASecond * intervalDate;
+				potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(sizeOfCost);
+			},
+			speedIntervalMLS
+
+		)
+	}
+	else {
+		sizeOfCost = 2;
+		speedIntervalMLS = 1000;
+		console.log(chekSpeedCost!.checked, speedIntervalMLS);
+		si = setInterval(
+
+			() => {
+				var curentDate = new Date();
+				var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000;
+				var potencialLosses = theCostOfASecond * intervalDate;
+				potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(sizeOfCost)
+			},
+			speedIntervalMLS
+
+		)
+
+
+	}
+}
+let si = setInterval(
+
+	() => {
+		var curentDate = new Date();
+		var intervalDate = (curentDate.getTime() - startUbitka.getTime()) / 1000
+		var potencialLosses = theCostOfASecond * intervalDate
+		potencial_Losses!.innerHTML = "₽ " + potencialLosses.toFixed(sizeOfCost)
+	},
+	speedIntervalMLS
+
 )
